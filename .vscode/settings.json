@@ -23,9 +23,7 @@
     "prettier.semi": false,
     "prettier.singleQuote": true,
     "prettier.trailingComma": "es5",
-    "typescriptHero.imports.insertSemicolons": false, // Following setting
-                                                     requires TypeScriptHero
-                                                            Extension
+    "typescriptHero.imports.insertSemicolons": false, // Following setting requires TypeScriptHero Extension
     "typescriptHero.imports.multiLineWrapThreshold": 90,
     "editor.codeActionsOnSave": {
         "source.organizeImports": true
