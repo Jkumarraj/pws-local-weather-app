@@ -8,7 +8,7 @@ import { WeatherServiceFake } from './weather.service.fake'
 describe('WeatherService', () => {
   beforeEach(() =>
     TestBed.configureTestingModule({
-      imports: [HttpClientTestingModule]
+      imports: [HttpClientTestingModule],
     })
   )
 
