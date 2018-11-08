@@ -13,8 +13,8 @@ export class CurrentWeatherComponent implements OnInit {
 
   constructor(private weatherService: WeatherService) {
     this.current = {
-      city: '',
-      country: '',
+      city: 'London',
+      country: 'GB',
       date: new Date(),
       image: '',
       temperature: 0,
@@ -26,5 +26,12 @@ export class CurrentWeatherComponent implements OnInit {
     this.weatherService
       .getCurrentWeather(this.current.city, this.current.country)
       .subscribe(data => (this.current = data))
+  }
+
+  getOrdinal(date: number) {
+    const n = new Date(date).getDate()
+    return n > 0
+      ? ['th', 'st', 'nd', 'rd'][(n > 3 && n < 21) || n % 10 > 3 ? 0 : n % 10]
+      : ''
   }
 }
